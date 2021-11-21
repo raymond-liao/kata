@@ -1,29 +1,26 @@
 package com.tdd.kata;
 
 public class Length {
-    private final int amountInInch;
     private final int amount;
-    private final String unit;
+    private final Unit unit;
 
-    public Length(int amount, String unit) {
+    public Length(int amount, Unit unit) {
         this.amount = amount;
         this.unit = unit;
-        if (unit.equals("Foot")) {
-            this.amountInInch = amount * 12;
-        } else if (unit.equals("Yard")) {
-            this.amountInInch = amount * 3 * 12;
-        } else {
-            this.amountInInch = amount;
-        }
+    }
+
+    private int getAmountInInch() {
+        return unit.getAmountInInch(amount);
     }
 
     @Override
     public String toString() {
-        return String.format("%d (%s)", amount, unit);
+        return unit.toString(amount);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return amountInInch == ((Length) obj).amountInInch;
+        Length another = (Length) obj;
+        return getAmountInInch() == another.getAmountInInch();
     }
 }
