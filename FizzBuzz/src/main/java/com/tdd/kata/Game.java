@@ -1,3 +1,5 @@
+package com.tdd.kata;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,5 +1,7 @@
+package com.tdd.kata;
+
 public class GameNumber {
-    private int rawNumber;
+    private final int rawNumber;
 
     public GameNumber(int rawNumber) {
         this.rawNumber = rawNumber;
@@ -7,17 +9,11 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (isRelatedBy(3) && isRelatedBy(5)) {
-            return "FizzBuzz";
-        }
-        if (isRelatedBy(3)) {
-            return "Fizz";
-        }
-
-        if (isRelatedBy(5)) {
-            return "Buzz";
-        }
-        return String.valueOf(rawNumber);
+        String result = "";
+        if (isRelatedBy(3)) result += "Fizz";
+        if (isRelatedBy(5)) result += "Buzz";
+        if (result.isEmpty()) result += String.valueOf(rawNumber);
+        return result;
     }
 
     private boolean isRelatedBy(int i) {

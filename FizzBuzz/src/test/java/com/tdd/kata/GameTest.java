@@ -1,3 +1,6 @@
+package com.tdd.kata;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -13,7 +16,7 @@ public class GameTest {
     @Test
     public void should_has_size_100_when_input_100() {
         Game game = new Game(100);
-        assertEquals(100, game.size());
+        Assertions.assertEquals(100, game.size());
     }
 
     @Test
