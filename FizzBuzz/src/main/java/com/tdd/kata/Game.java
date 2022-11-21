@@ -2,8 +2,10 @@ package com.tdd.kata;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Game {
+
     private final List<GameNumber> gameNumbers;
 
     public Game(int size) {
@@ -17,11 +19,7 @@ public class Game {
         return gameNumbers.size();
     }
 
-    public List<String> list() {
-        List<String> results = new ArrayList<>();
-        for (GameNumber gameNumber : gameNumbers) {
-            results.add(gameNumber.toString());
-        }
-        return results;
+    public List<String> words() {
+        return gameNumbers.stream().map(GameNumber::toString).collect(Collectors.toList());
     }
 }
