@@ -45,3 +45,7 @@ Coding kata with Java.
 5. 移动函数（Move Method） `F6`
 6. 改名（Change Name） `shift + F6`
 7. 改变签名（Change Signature） `command + F6`
+
+#### 其他
+1. 提交代码到本地 git 仓库 `command + k`，填写 comment 后使用 `command + enter` 提交
+2. 推送代码到远端 git 仓库 `shift + command + k`，使用 `command + enter` 提交
