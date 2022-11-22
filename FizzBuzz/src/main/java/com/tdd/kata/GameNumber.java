@@ -2,10 +2,10 @@ package com.tdd.kata;
 
 import static java.lang.String.valueOf;
 
-public class FBNumber {
-    private int rawNumber;
+public class GameNumber {
+    private final int rawNumber;
 
-    public FBNumber(int rawNumber) {
+    public GameNumber(int rawNumber) {
         this.rawNumber = rawNumber;
     }
 
@@ -14,11 +14,9 @@ public class FBNumber {
         if (isRelatedBy(3) && isRelatedBy(5)) {
             return "FizzBuzz";
         }
-
         if (isRelatedBy(3)) {
             return "Fizz";
         }
-
         if (isRelatedBy(5)) {
             return "Buzz";
         }

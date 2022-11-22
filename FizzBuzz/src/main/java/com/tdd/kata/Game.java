@@ -2,23 +2,22 @@ package com.tdd.kata;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Game {
-    private final ArrayList<FBNumber> fbNumbers;
+    private final ArrayList<GameNumber> gameNumbers;
 
     public Game(int number) {
-        fbNumbers = new ArrayList<>();
+        gameNumbers = new ArrayList<>();
         for (int i = 1; i <= number; i++) {
-            fbNumbers.add(new FBNumber(i));
+            gameNumbers.add(new GameNumber(i));
         }
     }
 
     public int size() {
-        return fbNumbers.size();
+        return gameNumbers.size();
     }
 
     public List<String> list() {
-        return fbNumbers.stream().map(FBNumber::toString).collect(Collectors.toList());
+        return gameNumbers.stream().map(GameNumber::toString).toList();
     }
 }

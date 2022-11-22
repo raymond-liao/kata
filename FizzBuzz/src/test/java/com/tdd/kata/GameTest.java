@@ -20,6 +20,7 @@ public class GameTest {
         assertEquals(100, list.size());
         assertEquals("1", list.get(0));
         assertEquals("Fizz", list.get(2));
+        assertEquals("Buzz", list.get(4));
+        assertEquals("FizzBuzz", list.get(14));
     }
-
 }
