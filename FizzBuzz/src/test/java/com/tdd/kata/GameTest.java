@@ -2,7 +2,6 @@ package com.tdd.kata;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,7 +12,7 @@ public class GameTest {
         Game game = new Game(100);
         assertEquals(100, game.size());
     }
-    
+
     @Test
     public void should_has_game_number_list_to_be_spoken() {
         Game game = new Game(100);
