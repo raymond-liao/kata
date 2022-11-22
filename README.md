@@ -24,6 +24,7 @@ Coding kata with Java.
 7. 在项目/文件导航快速搜索 `command + F1`
 8. 关闭当前打开的文件 `command + F4`
 9. 查看最近查看的 tab 或文件 `control + tab`
+10. 光标跳转到指定行 `command + g`
 
 #### 代码
 1. 查看 IDEA 建议的修复代码错误或警告的操作 `option + enter`  => 快速修复（Quick Fix）
