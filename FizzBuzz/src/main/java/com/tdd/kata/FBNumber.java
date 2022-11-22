@@ -1,5 +1,7 @@
 package com.tdd.kata;
 
+import static java.lang.String.valueOf;
+
 public class FBNumber {
     private int rawNumber;
 
@@ -21,10 +23,10 @@ public class FBNumber {
             return "Buzz";
         }
 
-        return String.valueOf(rawNumber);
+        return valueOf(rawNumber);
     }
 
     private boolean isRelatedBy(int number) {
-        return rawNumber % number == 0;
+        return rawNumber % number == 0 || valueOf(rawNumber).contains(valueOf(number));
     }
 }

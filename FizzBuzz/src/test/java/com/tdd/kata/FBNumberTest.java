@@ -28,4 +28,16 @@ public class FBNumberTest {
         FBNumber fbNumber = new FBNumber(15);
         assertEquals("FizzBuzz", fbNumber.toString());
     }
+
+    @Test
+    public void should_say_fizz_when_raw_number_is_13() {
+        FBNumber fbNumber = new FBNumber(13);
+        assertEquals("Fizz", fbNumber.toString());
+    }
+
+    @Test
+    public void should_say_fizzbuzz_when_raw_number_is_51() {
+        FBNumber fbNumber = new FBNumber(51);
+        assertEquals("FizzBuzz", fbNumber.toString());
+    }
 }
