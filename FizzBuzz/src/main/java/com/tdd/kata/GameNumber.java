@@ -1,5 +1,7 @@
 package com.tdd.kata;
 
+import static java.lang.String.valueOf;
+
 public class GameNumber {
 
     private final int rawNumber;
@@ -10,22 +12,22 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (isDivisibleBy(3) && isDivisibleBy(5)) {
+        if (isRelatedTo(3) && isRelatedTo(5)) {
             return "FizzBuzz";
         }
 
-        if (isDivisibleBy(3)) {
+        if (isRelatedTo(3)) {
             return "Fizz";
         }
 
-        if (isDivisibleBy(5)) {
+        if (isRelatedTo(5)) {
             return "Buzz";
         }
-        return String.valueOf(rawNumber);
+        return valueOf(rawNumber);
 
     }
 
-    private boolean isDivisibleBy(int denominator) {
-        return rawNumber % denominator == 0;
+    private boolean isRelatedTo(int number) {
+        return rawNumber % number == 0 || valueOf(rawNumber).contains(valueOf(number)) ;
     }
 }

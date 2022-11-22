@@ -28,6 +28,21 @@ public class GameNumberTest {
         GameNumber gameNumber = new GameNumber(15);
         assertEquals("FizzBuzz", gameNumber.toString());
     }
+
+    @Test
+    public void should_say_fizz_when_raw_number_is_13() {
+        GameNumber gameNumber = new GameNumber(13);
+        assertEquals("Fizz", gameNumber.toString());
+    }
+
+    @Test
+    public void should_say_correct_fizz_buzz_for_raw_number() {
+        assertEquals("Fizz", new GameNumber(23).toString());
+        assertEquals("FizzBuzz", new GameNumber(51).toString());
+        assertEquals("Buzz", new GameNumber(52).toString());
+        assertEquals("FizzBuzz", new GameNumber(53).toString());
+    }
+
 }
 
 
