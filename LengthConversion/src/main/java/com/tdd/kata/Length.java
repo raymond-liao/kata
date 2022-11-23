@@ -1,35 +1,27 @@
 package com.tdd.kata;
 
-import static java.lang.String.format;
-
 public class Length {
-
-    private final int amountInInch;
-    private final String unit;
     private final int amount;
+    private final Unit unit;
 
-    public Length(int amount, String unit) {
+    public Length(int amount, Unit unit) {
         this.amount = amount;
-
-        if (unit.equals("Foot")) {
-            amountInInch = 12 * amount;
-        } else if (unit.equals("Yard")) {
-            amountInInch = 3 * 12 * amount;
-        } else {
-            amountInInch = amount;
-        }
-
         this.unit = unit;
     }
 
     @Override
     public String toString() {
-        return format("%d (%s)", amount, unit);
+        return unit.getString(amount);
     }
 
     @Override
     public boolean equals(Object obj) {
         if (getClass() != obj.getClass()) return false;
-        return amountInInch == ((Length) obj).amountInInch;
+        Length another = (Length) obj;
+        return getAmountInInch() == another.getAmountInInch();
+    }
+
+    private int getAmountInInch() {
+        return unit.getAmountInInch(amount);
     }
 }
