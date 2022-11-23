@@ -9,20 +9,21 @@ public class Length {
         this.unit = unit;
     }
 
-    private int getAmountInInch() {
-        return unit.getAmountInInch(amount);
-    }
-
     @Override
     public String toString() {
         return unit.toString(amount);
     }
 
+
     @Override
     public boolean equals(Object obj) {
-        if (getClass() != obj.getClass())
-            return false;
+        if (getClass() != obj.getClass()) return false;
+
         Length another = (Length) obj;
         return getAmountInInch() == another.getAmountInInch();
+    }
+
+    private int getAmountInInch() {
+        return unit.getAmountInInch(amount);
     }
 }
