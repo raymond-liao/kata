@@ -1,8 +1,7 @@
 package com.tdd.kata;
 
-import static java.lang.String.valueOf;
-
 public class GameNumber {
+
     private final int rawNumber;
 
     public GameNumber(int rawNumber) {
@@ -11,20 +10,16 @@ public class GameNumber {
 
     @Override
     public String toString() {
-        if (isRelatedBy(3) && isRelatedBy(5)) {
+        if (rawNumber % 3 ==0 && rawNumber % 5 ==0) {
             return "FizzBuzz";
         }
-        if (isRelatedBy(3)) {
+
+        if (rawNumber % 3 ==0) {
             return "Fizz";
         }
-        if (isRelatedBy(5)) {
+        if (rawNumber % 5 ==0) {
             return "Buzz";
         }
-
-        return valueOf(rawNumber);
-    }
-
-    private boolean isRelatedBy(int number) {
-        return rawNumber % number == 0 || valueOf(rawNumber).contains(valueOf(number));
+        return String.valueOf(rawNumber);
     }
 }

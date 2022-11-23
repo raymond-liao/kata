@@ -29,6 +29,7 @@ public void should_$NAME$(){
 6. 关闭当前打开的文件 `command + F4`
 7. 查看最近查看的 tab 或文件 `control + tab`
 8. 光标跳转到指定行 `command + g`
+9. 光标定位到高亮的 Error：下一个 `F2`，上一个 `shift + F2`
 
 #### 代码处理
 
