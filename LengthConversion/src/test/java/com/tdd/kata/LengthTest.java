@@ -14,7 +14,7 @@ public class LengthTest {
     public void should_display_internal_information_friendly() {
         assertEquals("1 (Inch)", new Length(1, "Inch").toString());
         assertEquals("1 (Foot)", new Length(1, "Foot").toString());
-
+        assertEquals("1 (Yard)", new Length(1, "Yard").toString());
     }
 
     @Test
