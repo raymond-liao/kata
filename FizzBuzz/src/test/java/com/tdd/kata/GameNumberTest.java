@@ -29,4 +29,16 @@ public class GameNumberTest {
         assertEquals("FizzBuzz", gameNumber.toString());
     }
 
+    @Test
+    public void should_say_fizzbuzz_when_raw_number_is_51() {
+        GameNumber gameNumber = new GameNumber(51);
+        assertEquals("FizzBuzz", gameNumber.toString());
+    }
+
+    @Test
+    public void should_say_buzz_when_raw_number_is_52() {
+        GameNumber gameNumber = new GameNumber(52);
+        assertEquals("Buzz", gameNumber.toString());
+    }
+
 }

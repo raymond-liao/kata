@@ -24,6 +24,6 @@ public class GameNumber {
     }
 
     private boolean isRelatedBy(int number) {
-        return rawNumber % number == 0;
+        return rawNumber % number == 0 || String.valueOf(rawNumber).contains(String.valueOf(number));
     }
 }
