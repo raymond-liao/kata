@@ -20,6 +20,7 @@ public class Length {
 
     @Override
     public boolean equals(Object obj) {
+        if (getClass() != obj.getClass()) return false;
         return amountInInch == ((Length) obj).amountInInch;
     }
 
