@@ -30,6 +30,7 @@ public void should_$NAME$(){
 7. 查看最近查看的 tab 或文件 `control + tab`
 8. 光标跳转到指定行 `command + g`
 9. 光标定位到高亮的 Error：下一个 `F2`，上一个 `shift + F2`
+10. 光标定位到函数实现或调用 `command + b`
 
 #### 代码处理
 
